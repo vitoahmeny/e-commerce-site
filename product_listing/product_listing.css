@@ -1,0 +1,148 @@
+body {
+	width: 90%;
+	margin: auto;
+	margin-top: 7%;
+	font-family: segoe ui, helvetica neue, sans-serif;
+
+}
+
+h1, h2 {
+	font-size: 3em;
+	font-weight: 200;
+}
+
+h2 {
+	margin-left: 5%;
+}
+
+.product_listing_image {
+	width: 300px;
+	opacity: 1;
+
+}
+
+.product_listing_image:hover {
+	opacity: 0.7;
+}
+
+div {
+	height: 380px;
+	display: inline-block;
+}
+
+div p {
+	display: block;
+	border: none;
+	width: 300px;
+	height: 100px;
+	font-family: segoe ui, helvetica neue, sans-serif;
+	font-size: 1.1em;
+	font-weight: 200;
+	color: gray;
+	margin: 0 5px 0 5px;
+}
+
+.price {
+	font-weight: 600;
+}
+
+.add_to_cart {
+	color: gray;
+	float: right;
+	height: 1.8em;
+	border: 1px solid gray;
+	background-color: white;
+	font-size: 0.8em;
+	margin-right: 5px;
+	opacity: 1;
+}
+
+.add_to_cart:hover {
+	opacity: 0.5;
+}
+
+.add_to_cart:visited {
+	display: none;
+}
+
+table {
+	width: 90%;
+	margin: auto;
+	border-collapse: separate;
+	border-spacing: 20px; 10px;
+	border: 1px solid gray;
+	margin-bottom: 100px;
+}
+
+
+.close button {
+	border: none;
+	background-color: white;
+	font-size: 1em;
+	color: gray;
+}
+
+
+.thumbnail img {
+}
+
+th {
+	text-align: left;
+}
+
+th.title_row_product {
+	text-align: center;
+}
+
+td.product_title {
+	text-align: center;
+	font-weight: 200;
+	width: 60%;
+}
+
+.quantity input	{
+	width: 60%;
+	height: 20px;
+	border: 1px solid gray;
+	text-align: center;
+}
+
+#navigation_bar ul {
+	font-family: lucida sans unicode, lucida grande, sans-serif;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	list-style: none;
+	text-align: left;
+	background-color: #f2f2f2;
+	font-size: 18px;
+	margin-top: 0;
+	height: 60px;
+	line-height: 60px;
+	box-shadow: 1px 1px 5px #808080;
+
+}
+
+#navigation_bar ul img {
+	max-width: 45px;
+	border-radius: 50%;
+	float: right;
+	margin-right: 3%;
+	margin-top: 8px;
+}
+#navigation_bar ul	li {
+	display: inline-block;
+	margin-right: 5%;
+	color: #808080;
+
+}
+
+#navigation_bar ul a {
+	text-decoration: none;
+	opacity: 1;
+}
+
+#navigation_bar ul a:hover {
+	opacity: 0.7;
+}
