@@ -3,6 +3,7 @@ body {
 	margin: auto;
 	margin-top: 7%;
 	font-family: segoe ui, helvetica neue, sans-serif;
+	padding-bottom: 10%;
 
 }
 
@@ -13,6 +14,17 @@ h1, h2 {
 
 h2 {
 	margin-left: 5%;
+}
+
+#shoppingCart {
+	width:100px;
+	position: absolute;
+	top: 12%;
+	right: 5%;
+}
+
+#shoppingCart:hover {
+	opacity: 0.7;
 }
 
 .product_listing_image {
@@ -65,13 +77,19 @@ div p {
 	display: none;
 }
 
+
+.cart {
+	display: none;
+	position: relative;
+}
+
+
 table {
 	width: 90%;
 	margin: auto;
 	border-collapse: separate;
-	border-spacing: 20px; 10px;
+	border-spacing: 20px;
 	border: 1px solid gray;
-	margin-bottom: 100px;
 }
 
 
@@ -84,6 +102,7 @@ table {
 
 
 .thumbnail img {
+	width: 60px;
 }
 
 th {
@@ -105,6 +124,21 @@ td.product_title {
 	height: 20px;
 	border: 1px solid gray;
 	text-align: center;
+}
+
+#promo {
+	margin-top: 27px;
+	margin-left: 5%;
+	padding-left: 5px;
+	font-size: 1.2em;
+}
+
+#total {
+	font-size: 2em;
+	float: right;
+	text-align: right;
+	margin-top: 20px;
+	margin-right: 7%;
 }
 
 #navigation_bar ul {
