@@ -33,27 +33,28 @@ document.addEventListener('DOMContentLoaded', function () {
 	};
 
 
+	//
 	var quantityChangeHandler = function (event) {
 		event.preventDefault();
 		var parent = this.parentNode.parentNode.parentNode;
 		var child = this.parentNode.parentNode;
 		var price = this.parentNode.previousSibling.textContent;
-		var unitTotal = (Number(price.slice(1)) * this.value).toFixed(2);
+		var unitTotal = ((Number(price.slice(1)) * Number(this.value))).toFixed(2);
 		var index = cartArr.indexOf(child);
-		if (this.value == 0) {
+		if (Number(this.value) === 0) {
 			parent.removeChild(child);
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - Number(price.slice(1))).toFixed(2);
+			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - (Number(price.slice(1)) * (this.getAttribute('value') - this.value)).toFixed(2));
 
 		}
-		else if (this.value > this.getAttribute('value')) {
+		else if (Number(this.value) > Number(this.getAttribute('value'))) {
 			this.parentNode.nextSibling.innerHTML = '$' + unitTotal;
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) + Number(price.slice(1))).toFixed(2);
+			total.innerHTML = "$" + (Number(total.textContent.slice(1)) + (Number(price.slice(1)) * (this.value - this.getAttribute('value')))).toFixed(2);
 			this.setAttribute('value', this.value);
 		}
 
 		else {
 			this.parentNode.nextSibling.innerHTML = '$' + unitTotal;
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - Number(price.slice(1))).toFixed(2);
+			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - (Number(price.slice(1)) * (this.getAttribute('value') - this.value)).toFixed(2));
 			this.setAttribute('value', this.value);
 		}
 
