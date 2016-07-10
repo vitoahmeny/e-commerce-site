@@ -43,18 +43,18 @@ document.addEventListener('DOMContentLoaded', function () {
 		var index = cartArr.indexOf(child);
 		if (Number(this.value) === 0) {
 			parent.removeChild(child);
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - (Number(price.slice(1)) * (this.getAttribute('value') - this.value)).toFixed(2));
+			total.innerHTML = "$" + ((Number(total.textContent.slice(1)) - Number(price.slice(1)) * (this.getAttribute('value') - this.value))).toFixed(2);
 
 		}
 		else if (Number(this.value) > Number(this.getAttribute('value'))) {
 			this.parentNode.nextSibling.innerHTML = '$' + unitTotal;
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) + (Number(price.slice(1)) * (this.value - this.getAttribute('value')))).toFixed(2);
+			total.innerHTML = "$" + (Number(total.textContent.slice(1)) + Number(price.slice(1)) * (this.value - this.getAttribute('value'))).toFixed(2);
 			this.setAttribute('value', this.value);
 		}
 
 		else {
 			this.parentNode.nextSibling.innerHTML = '$' + unitTotal;
-			total.innerHTML = "$" + (Number(total.textContent.slice(1)) - (Number(price.slice(1)) * (this.getAttribute('value') - this.value)).toFixed(2));
+			total.innerHTML = "$" + ((Number(total.textContent.slice(1)) - Number(price.slice(1)) * (this.getAttribute('value') - this.value))).toFixed(2);
 			this.setAttribute('value', this.value);
 		}
 
