@@ -29,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 		var index = addedItems.indexOf(productNum);
 		addedItems.splice(index, 1);
 		parent.removeChild(child);
-		
 	};
 
 
